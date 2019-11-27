@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:marginLeft="30dp"
+    android:marginRight="40dp">
     <TextView
         android:text="Value a:"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -15,7 +18,9 @@
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1" />
+        android:id="@+id/editText1"
+        local:MvxBind="Text A"
+        />
     <TextView
         android:text="Value b:"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -26,7 +31,9 @@
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2" />
+        android:id="@+id/editText2"
+        local:MvxBind="Text B"
+        />
     <TextView
         android:text="Value c:"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -37,12 +44,16 @@
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3" />
+        android:id="@+id/editText3"
+        local:MvxBind="Text C"
+        />
     <Button
         android:text="Calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="@+id/button1"
+        local:MvxBind="Click CalculateCommand"
+        />
     <TextView
         android:text="x1 is:"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -50,11 +61,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView4" />
     <TextView
-        android:text="Large Text"
+        android:text="..."
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
+        android:id="@+id/textView5"
+        local:MvxBind="Text ResultAdd"/>
     <TextView
         android:text="x2 is:"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -62,10 +74,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView6" />
     <TextView
-        android:text="Large Text"
+        android:text="..."
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView7" />
+        android:id="@+id/textView7"
+        local:MvxBind="Text ResultSubtract"/>
 
 </LinearLayout>
